@@ -24,7 +24,8 @@ jobs:
             - name: zipping all the nodes and app files
               run: |
                 npm install zip
-                zip -r build.zip
+                zip -r build.zip * ./.git node_modules/
+
 
             
             - name: listing
