@@ -1,1 +1,25 @@
+name: Dependencies example
 
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    setup-node:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout
+              uses: checkout@v3
+
+            - name: setting up the npm framework
+              uses: actions/setup-node@v3
+              with:
+                node-version: '20.x'
+
+            - name: installing dependencies
+              run: npm install
+            
+            - name: listing
+              run: ls -alhR
