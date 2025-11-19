@@ -11,7 +11,7 @@ jobs:
 
         steps:
             - name: checkout
-              uses: checkout@v3
+              uses: actions/checkout@v3
 
             - name: setting up the npm framework
               uses: actions/setup-node@v3
