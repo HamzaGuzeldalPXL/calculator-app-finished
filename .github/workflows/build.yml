@@ -1,4 +1,4 @@
-name: Dependencies example
+name: Build example
 
 on:
     push:
@@ -20,6 +20,11 @@ jobs:
 
             - name: installing dependencies
               run: npm install
+
+            - name: zipping all the nodes and app files
+              run: |
+                npm install zip
+                zip -r build.zip
 
             
             - name: listing
